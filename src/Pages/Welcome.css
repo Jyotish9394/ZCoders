@@ -1,4 +1,4 @@
-.first_section {
+.first_section1 {
     display: flex;
     justify-content: center;
     margin-left: 65px;
@@ -14,34 +14,34 @@
     font-size: 2.5rem;
 }
 
-.first_section>div {
+.first_section1>div {
     width: 80%;
     margin: 4% 20px;
 }
-.left_section{
+.left_section1{
     width: 100%;
     padding: 0px 70px;
     margin-left: 8px;
 }
-.right_section{
+.right_section1{
     width: 40%;
     font-size: 1.5rem;
     
     
 }
-.right_section li{
+.right_section1 li{
     list-style: none;
     display: flex;
     justify-content: center;
     margin-top: 10px;
     margin-left: 140px;
 }
-.right_section li a{
+.right_section1 li a{
     text-decoration: none;
     color: aliceblue;
     
 }
-.right_section a:hover{
+.right_section1 a:hover{
     font-size: 1.7rem;
 }
 hr{
@@ -49,7 +49,7 @@ hr{
     margin-left: 9%;
     width: 80%;
 }
-.second_section{
+.second_section1{
     display: flex;
     justify-content: center;
     margin-top: 40px;

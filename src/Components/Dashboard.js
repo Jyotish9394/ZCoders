@@ -1,5 +1,4 @@
 import React from 'react';
-import './Dashboard-c.css';
 
 export default function Navbar(props) {
     return (

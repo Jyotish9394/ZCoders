@@ -1,5 +1,4 @@
 import React from 'react';
-import  './Barc.css';
 
 export default function Navbar(props) {
     return (

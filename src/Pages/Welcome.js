@@ -1,17 +1,17 @@
 import React from 'react';
 import NavBar from '../Components/Navbar';
-import './Welcome.css';
+
 
 export default function Welcome() {
     return (
         <>
             <NavBar />
-            <section class="first_section">
-                <div class="left_section">
+            <section class="first_section1">
+                <div class="left_section1">
                     <div class="wel">Welcome to ZCoder</div>
                     <div class="wel1">Improve Your Skills</div>
                 </div>
-                <div class="right_section">
+                <div class="right_section1">
                     <ul>
                         <li><a href="li1">Request Demo</a></li>
                         <li><a href="li2">Resources</a></li>
@@ -20,7 +20,7 @@ export default function Welcome() {
                 </div>
             </section>
             <hr />
-            <section class="second_section">
+            <section class="second_section1">
                 <div class="line_1">
                     <p class="line_01">Develop the strongest tech teams around</p>
                     <p>Sharpen your tech skills and pursue job opportunities</p>

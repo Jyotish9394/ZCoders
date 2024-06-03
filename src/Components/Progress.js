@@ -1,5 +1,4 @@
 import React from 'react';
-import './Progress.css';
 import cppImage from './Images/pngwing.com.png';
 import pythonImage from './Images/python.com.png';
 import javaImage from './Images/java.com.png';
