@@ -6,7 +6,17 @@
 *:focus{
     outline: none;
 }
-body {
+.home_button{
+    background-color: rgb(2, 6, 47);
+    text-align: end;
+    margin-top: 10px;
+}
+.home_button a{
+    text-decoration: none;
+    color: aliceblue;
+    margin-right: 80px;
+}
+.new_css {
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -47,6 +57,10 @@ input{
     padding: 15px;
     transition: 0.5s;
     text-transform: capitalize;
+}
+.new_input{
+    width: 140%;
+    margin-left: -46px;
 }
 .submit-btn{
     width: auto;

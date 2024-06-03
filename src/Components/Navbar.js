@@ -12,7 +12,7 @@ export default function Navbar(props) {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="/" style={{ color: 'white' }}>Home</a>
+                            <a className="nav-link active" aria-current="page" href="home" style={{ color: 'white' }}>Home</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="mailto:zcoder@gmail.com" style={{ color: 'white' }}>Contact Us</a>
@@ -29,7 +29,7 @@ export default function Navbar(props) {
                             </ul>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="/" style={{ color: 'white' }}>Login</a>
+                            <a className="nav-link active" aria-current="page" href="login" style={{ color: 'white' }}>Login</a>
                         </li>
                     </ul>
                     <form className="d-flex" role="search">
@@ -44,5 +44,5 @@ export default function Navbar(props) {
 
 Navbar.propTypes = { title: PropTypes.string }
 Navbar.defaultProps = {
-    title: "Unknown"
+    title: "Zcoder"
 }
