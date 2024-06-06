@@ -1,8 +1,9 @@
-import React from 'react';
+import React,{useState} from 'react';
 
 
 
 export default function Login() {
+    const [username,setUser] = useState('');
     return (
         <>
             <div className="home_button"><a href="/">Back</a></div>

@@ -24,7 +24,7 @@ export default function Navbar(props) {
                             <ul className="dropdown-menu">
                                 <li><a className="dropdown-item" href="/">My Problems</a></li>
                                 <li><a className="dropdown-item" href="/">Unsolved Problems</a></li>
-                                <li><a className="dropdown-item" href="/">Go to Codeforces</a></li>
+                                <li><a className="dropdown-item" href="/">Solved Problems</a></li>
                             </ul>
                         </li>
                         <li className="nav-item">
