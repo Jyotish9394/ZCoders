@@ -22,10 +22,9 @@ export default function Navbar(props) {
                                 Services
                             </a>
                             <ul className="dropdown-menu">
-                                <li><a className="dropdown-item" href="/">Hotel Booking</a></li>
-                                <li><a className="dropdown-item" href="/">Another action</a></li>
-                                <li><hr className="dropdown-divider" /></li>
-                                <li><a className="dropdown-item" href="/">Something else here</a></li>
+                                <li><a className="dropdown-item" href="/">My Problems</a></li>
+                                <li><a className="dropdown-item" href="/">Unsolved Problems</a></li>
+                                <li><a className="dropdown-item" href="/">Go to Codeforces</a></li>
                             </ul>
                         </li>
                         <li className="nav-item">
