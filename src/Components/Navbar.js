@@ -28,7 +28,7 @@ export default function Navbar(props) {
                             </ul>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="login" style={{ color: 'white' }}>Login</a>
+                            <a className="nav-link active" aria-current="page" href="/" style={{ color: 'white' }}>Logout</a>
                         </li>
                     </ul>
                     <form className="d-flex" role="search">

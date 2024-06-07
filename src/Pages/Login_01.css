@@ -56,7 +56,6 @@ input{
     color: #fff;
     padding: 15px;
     transition: 0.5s;
-    text-transform: capitalize;
 }
 .new_input{
     width: 140%;

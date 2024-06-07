@@ -1,49 +1,73 @@
-import React,{useState} from 'react';
-import {useNavigate} from 'react-router-dom';
-
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Register() {
-
-
-    const [name,setName] = useState("");
-    const [email,setEmail] = useState("");
-    const [password,setPassword] = useState("");
-    const [username,setUser] = useState("");
-    const [cprating,setRating] = useState("");
-    const [userlanguage,setLanguage] = useState("");
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [username, setUsername] = useState("");
+    const [cprating, setRating] = useState("");
+    const [userlanguage, setLanguage] = useState("");
+    const [error, setError] = useState("");
     const navigate = useNavigate();
 
-    async function signUp(){
+    const handleUsernameChange = (event) => {
+        const value = event.target.value.replace(/\s/g, '');
+        setUsername(value);
+    };
+
+    async function signUp() {
         
-        const item ={name,email,password,username,cprating,userlanguage};
-        let result=await fetch({
-            method:'',
-            body: JSON.stringify(item),
-            headers:{
-                "Content-Type":'application/json',
-                "Accept":'application/json'
+
+        
+        const checkUsernameResult = await fetch('YOUR_API_ENDPOINT/check-username', { //replace api
+            method: 'POST',
+            body: JSON.stringify({ username }),
+            headers: {
+                "Content-Type": 'application/json',
+                "Accept": 'application/json'
             }
-        })
-        result=await result.json();
-        localStorage.setItem("storage-name",JSON.stringify(result));
+        });
+        const checkUsernameResponse = await checkUsernameResult.json();
+        
+        if (!checkUsernameResponse.isUnique) {
+            setError("Username is already taken.");
+            return;
+        }
+
+        const item = { name, email, password, username, cprating, userlanguage };
+        
+        let result = await fetch('YOUR_API_ENDPOINT/register', { // Replace api
+            method: 'POST',
+            body: JSON.stringify(item),
+            headers: {
+                "Content-Type": 'application/json',
+                "Accept": 'application/json'
+            }
+        });
+        
+        result = await result.json();
+        localStorage.setItem("storage-name", JSON.stringify(result));
         navigate("/home");
     }
+
     return (
         <>
             <div className="home_button"><a href="/">Back</a></div>
             <div className="new_css">
                 <div className="form">
                     <h1 className="heading">Register</h1>
-                    <input type="text" value={name} onChange={(e)=>setName(e.target.value)} placeholder="name" autocomplete="on" className="name" required />
-                    <input type="text" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="email" autocomplete="on" className="email" required />
-                    <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder="password" autocomplete="off" className="email" required />
-                    <input type="text" value={username} onChange={(e)=>setUser(e.target.value)} placeholder="Username" autocomplete="off" className="userName" required />
-                    <input type="text" value={cprating} onChange={(e)=>setRating(e.target.value)} placeholder="CP Rating" autocomplete="of" className="CPRating" />
-                    <input type="text" value={userlanguage} onChange={(e)=>setLanguage(e.target.value)} placeholder="Fav Language" autocomplete="of" className="CPRating" />
+                    {error && <div className="error">{error}</div>}
+                    <input style={{textTransform:'capitalize'}} type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Name" autoComplete="on" className="name" required />
+                    <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" autoComplete="on" className="email" required />
+                    <input type="text" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" autoComplete="off" className="password" required />
+                    <input type="text" value={username} onChange={handleUsernameChange} placeholder="Username" autoComplete="off" className="userName" required />
+                    <input type="text" value={cprating} onChange={(e) => setRating(e.target.value)} placeholder="CP Rating" autoComplete="off" className="CPRating" />
+                    <input type="text" value={userlanguage} onChange={(e) => setLanguage(e.target.value)} placeholder="Fav Language" autoComplete="off" className="CPRating" />
                     <button className="submit-btn" onClick={signUp}>Register</button>
                     <a href="login" className="link">Already have an account? Login</a>
                 </div>
             </div>
         </>
-    )
+    );
 }
