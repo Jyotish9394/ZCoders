@@ -8,7 +8,7 @@ export default function Welcome() {
             <div className="WelNav" style={{color: 'white' ,display:'flex',justifyContent:'center',backgroundColor: 'rgba(19, 31, 121, 0.4)', width:'100%'}}>
                 <nav className="navbar navbar-expand-lg" style={{ }}>
                     <div className="container-fluid">
-                        <div className="navbar-brand" style={{ color: 'white' }}>Zcoder</div>
+                        <div className="navbar-brand" style={{ color: 'white',fontSize:'1.5rem' }}>Zcoder</div>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
@@ -17,17 +17,7 @@ export default function Welcome() {
                                 <li className="nav-item">
                                     <a className="nav-link" href="mailto:zcoder@gmail.com" style={{ color: 'white' }}>Contact Us</a>
                                 </li>
-                                <li className="nav-item dropdown">
-                                    <a className="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false" style={{ color: 'white' }}>
-                                        Services
-                                    </a>
-                                    <ul className="dropdown-menu">
-                                        <li><a className="dropdown-item" href="/">Hotel Booking</a></li>
-                                        <li><a className="dropdown-item" href="/">Another action</a></li>
-                                        <li><hr className="dropdown-divider" /></li>
-                                        <li><a className="dropdown-item" href="/">Something else here</a></li>
-                                    </ul>
-                                </li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -41,9 +31,9 @@ export default function Welcome() {
                 </div>
                 <div className="right_section1">
                     <ul>
-                        <li><a href="li1">Request Demo</a></li>
-                        <li><a href="li2">Resources</a></li>
-                        <li><a href="li3">Solutions</a></li>
+                        <li><a href="demo">Request Demo</a></li>
+                        <li><a href="li2">Solved Problems</a></li>
+                        <li><a href="li3">Unsolved Problems</a></li>
                     </ul>
                 </div>
             </section>
